@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02D37C3926B15A7B00ABA602 /* iPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D37C3826B15A7B00ABA602 /* iPlaceApp.swift */; };
-		02D37C3B26B15A7B00ABA602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D37C3A26B15A7B00ABA602 /* ContentView.swift */; };
+		02D37C3B26B15A7B00ABA602 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D37C3A26B15A7B00ABA602 /* MainView.swift */; };
 		02D37C3D26B15A7C00ABA602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D37C3C26B15A7C00ABA602 /* Assets.xcassets */; };
 		02D37C4026B15A7C00ABA602 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D37C3F26B15A7C00ABA602 /* Preview Assets.xcassets */; };
 		02D37C4826B15ABE00ABA602 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D37C4726B15ABE00ABA602 /* Place.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		02D37C3526B15A7B00ABA602 /* iPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D37C3826B15A7B00ABA602 /* iPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPlaceApp.swift; sourceTree = "<group>"; };
-		02D37C3A26B15A7B00ABA602 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02D37C3A26B15A7B00ABA602 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		02D37C3C26B15A7C00ABA602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02D37C3F26B15A7C00ABA602 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02D37C4126B15A7C00ABA602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,11 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				02D37C3826B15A7B00ABA602 /* iPlaceApp.swift */,
-				02D37C3A26B15A7B00ABA602 /* ContentView.swift */,
-				02D37C5226B16F4A00ABA602 /* AddPlaceView.swift */,
-				02D37C4926B15B0600ABA602 /* PlaceManager.swift */,
-				02D37C4726B15ABE00ABA602 /* Place.swift */,
-				02D37C5026B1615D00ABA602 /* StorageManager.swift */,
+				02E4452826B1CB7D0078FE9C /* Storages */,
+				02E4452726B1CB750078FE9C /* ViewModels */,
+				02E4452626B1CB6F0078FE9C /* Models */,
+				02E4452526B1CB2A0078FE9C /* Views */,
 				02D37C3C26B15A7C00ABA602 /* Assets.xcassets */,
 				02D37C4126B15A7C00ABA602 /* Info.plist */,
 				02D37C3E26B15A7C00ABA602 /* Preview Content */,
@@ -83,6 +82,39 @@
 				02D37C3F26B15A7C00ABA602 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02E4452526B1CB2A0078FE9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02D37C3A26B15A7B00ABA602 /* MainView.swift */,
+				02D37C5226B16F4A00ABA602 /* AddPlaceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02E4452626B1CB6F0078FE9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02D37C4726B15ABE00ABA602 /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02E4452726B1CB750078FE9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				02D37C4926B15B0600ABA602 /* PlaceManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		02E4452826B1CB7D0078FE9C /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				02D37C5026B1615D00ABA602 /* StorageManager.swift */,
+			);
+			path = Storages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +197,7 @@
 				02D37C4A26B15B0600ABA602 /* PlaceManager.swift in Sources */,
 				02D37C5326B16F4A00ABA602 /* AddPlaceView.swift in Sources */,
 				02D37C5126B1615D00ABA602 /* StorageManager.swift in Sources */,
-				02D37C3B26B15A7B00ABA602 /* ContentView.swift in Sources */,
+				02D37C3B26B15A7B00ABA602 /* MainView.swift in Sources */,
 				02D37C3926B15A7B00ABA602 /* iPlaceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

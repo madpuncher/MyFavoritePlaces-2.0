@@ -11,7 +11,7 @@ import SwiftUI
 struct iPlaceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .preferredColorScheme(.light)
         }
     }

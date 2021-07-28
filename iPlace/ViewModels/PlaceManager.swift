@@ -16,7 +16,6 @@ class PlaceManager: ObservableObject {
     @Published var placeType = ""
     @Published var image: UIImage?
     
-    @Published var showImage: Image?
     
     init() {
         getDataFromDB()
@@ -25,9 +24,10 @@ class PlaceManager: ObservableObject {
     //MARK: - Get data from realm
     private func getDataFromDB() {
         let results = realm.objects(Place.self)
-        self.places = results.compactMap({ place in
-            return place
-        })
+            self.places = results.compactMap({ place in
+                return place
+            })
+        
     }
     
     //MARK: - Append new object in data base
@@ -41,6 +41,11 @@ class PlaceManager: ObservableObject {
         newPlace.image = imageData!
         StorageManager.addObject(newPlace)
         getDataFromDB()
+        
+        placeName = ""
+        placeLocation = ""
+        placeType = ""
+        image = nil
     }
     
     //MARK: - Delete object from data base
@@ -50,5 +55,22 @@ class PlaceManager: ObservableObject {
         StorageManager.deleteObject(item)
         
         getDataFromDB()
+    }
+    
+    //MARK: - Edit current place
+    func editPlace(object: Place) {
+        let imageData = image?.pngData() ?? UIImage(named: "imagePlaceholder")?.pngData()
+        try! realm.write{
+            object.name = placeName
+            object.location = placeLocation
+            object.type = placeType
+            object.rating = 0.0
+            object.image = imageData!
+        }
+        
+        placeName = ""
+        placeLocation = ""
+        placeType = ""
+        image = nil
     }
 }
